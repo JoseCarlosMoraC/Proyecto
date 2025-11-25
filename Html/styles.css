@@ -1,0 +1,180 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a202c;
+    color: #f0f4f8;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Mobile Frame */
+.mobile-frame {
+    width: 375px;
+    height: 667px;
+    background: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Screen Styles */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Header Styles */
+.login-header,
+.register-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1,
+.register-header h1 {
+    font-size: 32px;
+    color: #2b6cb0;
+}
+
+.highlight {
+    color: #ed8936;
+}
+
+/* Forms */
+input,
+select {
+    padding: 12px;
+    border: 2px solid #edf2f7;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: #ed8936;
+    color: white;
+}
+
+.btn-create-account {
+    background-color: transparent;
+    border: 2px solid #edf2f7;
+    color: #edf2f7;
+}
+
+.btn-login:hover,
+.btn-create-account:hover {
+    background-color: #dd6b20;
+}
+
+/* Coordinator Screen */
+.coordinator-screen .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.coordinator-screen .user-info {
+    text-align: left;
+}
+
+.coordinator-screen .user-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.coordinator-screen .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.coordinator-screen .icon-button {
+    background: #4a5568;
+    color: #edf2f7;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.coordinator-screen .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: #edf2f7;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quick-action-btn {
+    background: #ed8936;
+    color: white;
+    padding: 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quick-action-btn:hover {
+    background: #dd6b20;
+}
+
+.recent-activity h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.activity-item {
+    background: #edf2f7;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 400px) {
+    .mobile-frame {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
+}

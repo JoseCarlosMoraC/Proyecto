@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard Coordinador</title>
+<style>
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background: #f7f8fb;
+ }
+ .header {
+   background: linear-gradient(135deg, #003a64, #004b7a);
+   color: white;
+   padding: 25px;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+ }
+ .header h2 {
+   margin: 0;
+   font-size: 24px;
+ }
+ .header p {
+   margin: 5px 0 15px 0;
+   opacity: 0.85;
+   font-size: 14px;
+ }
+ .stats-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 12px;
+   padding: 18px;
+ }
+ .stat-card {
+   background: white;
+   border-radius: 14px;
+   padding: 18px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+ }
+ .stat-card h3 {
+   margin: 0;
+   color: #666;
+   font-size: 13px;
+ }
+ .stat-card .value {
+   margin-top: 8px;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ .actions {
+   padding: 20px;
+ }
+ .btn-primary {
+   width: 100%;
+   background: linear-gradient(90deg, #ff5a7e, #ff2b59);
+   color: white;
+   padding: 15px;
+   border: none;
+   border-radius: 12px;
+   font-size: 16px;
+   cursor: pointer;
+ }
+ .btn-secondary {
+   width: 100%;
+   background: white;
+   border: 1px solid #ddd;
+   color: #444;
+   padding: 13px;
+   border-radius: 12px;
+   margin-top: 12px;
+   cursor: pointer;
+ }
+ .activity {
+   padding: 20px;
+ }
+ .activity h3 {
+   font-size: 16px;
+   margin-bottom: 12px;
+ }
+ .activity-card {
+   background: white;
+   margin-bottom: 15px;
+   padding: 16px;
+   border-radius: 14px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+ }
+ .activity-title {
+   font-weight: bold;
+   font-size: 15px;
+ }
+ .activity-time {
+   font-size: 12px;
+   color: #777;
+ }
+ .status-success, .status-warning {
+   padding: 10px;
+   border-radius: 50%;
+   font-size: 14px;
+ }
+ .status-success {
+   background: #d6f5d6;
+   color: #3a8b3a;
+ }
+ .status-warning {
+   background: #ffe1d6;
+   color: #d45d3a;
+ }
+ .navbar {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background: white;
+   display: flex;
+   justify-content: space-around;
+   padding: 10px 0;
+   border-top: 1px solid #ddd;
+ }
+ .navbar div {
+   text-align: center;
+   font-size: 12px;
+   color: #888;
+ }
+ 
+ /* Ajustes específicos para móvil */
+ @media (max-width: 480px) {
+   .header h2 { font-size: 22px; }
+   .stats-container { grid-template-columns: 1fr 1fr; }
+   .stat-card { padding: 14px; }
+   .btn-primary, .btn-secondary { font-size: 15px; }
+   .activity-title { font-size: 14px; }
+   .navbar div { font-size: 11px; }
+ }
+</style>
+</head>
+<body>
+ <div class="header">
+   <p>Bienvenido</p>
+   <h2>Antonio Polo</h2>
+   <p>Coordinador</p>
+ </div>
+
+ <div class="stats-container">
+   <div class="stat-card"><h3>Equipos</h3><div class="value">12</div></div>
+   <div class="stat-card"><h3>Jugadores</h3><div class="value">304</div></div>
+   <div class="stat-card"><h3>Entrenadores</h3><div class="value">18</div></div>
+   <div class="stat-card"><h3>Partidos hoy</h3><div class="value">5</div></div>
+ </div>
+
+ <div class="actions">
+   <button class="btn-primary">+ Crear nuevo equipo</button>
+   <button class="btn-secondary">+ Añadir jugador</button>
+ </div>
+
+ <div class="activity">
+   <h3>Actividad reciente</h3>
+   <div class="activity-card">
+     <div>
+       <div class="activity-title">Juvenil A - Entrenamiento</div>
+       <div class="activity-time">Hace 2 horas</div>
+     </div>
+     <div class="status-success">✔</div>
+   </div>
+
+   <div class="activity-card">
+     <div>
+       <div class="activity-title">Cadete B - Partido</div>
+       <div class="activity-time">Hace 5 horas</div>
+     </div>
+     <div class="status-warning">🏆</div>
+   </div>
+ </div>
+
+ <div class="navbar">
+   <div>🏠<br>Inicio</div>
+   <div>👥<br>Equipos</div>
+   <div>📊<br>Stats</div>
+   <div>⚙️<br>Perfil</div>
+ </div>
+</body>
+</html>
